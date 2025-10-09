@@ -1,0 +1,35 @@
+
+
+
+sys.path.append(os.path.abspath('K:\My Drive\labPython\inw_library'))  # ok Adjust the path as needed
+from inw_library import testFnc as ts#HelloWorld
+from inw_library import fncFile_folder
+from inw_library import fncPostgres as fPgrs
+from inw_library import fncDataFrame as fDtf
+
+
+
+"""  ok ใช้ได้
+ ตั้งค่าในไฟล์ settings.json ของ VSCode ดังนี้ 
+เพื่อให้ VSCode สามารถรู้จักโมดูลที่อยู่ในโฟลเดอร์ที่ไม่ใช่โฟลเดอร์ที่เก็บโค้ดของโปรเจค
+{
+  "python.autoComplete.extraPaths": [
+    ".."
+  ],
+  "python.analysis.extraPaths": [
+    ".."
+    ,"../../inw_library"  
+    ,"K:\\My Drive\\labPython\\inw_library"
+  ],
+  "python.analysis.autoSearchPaths": true
+}
+ """
+
+
+""" ติดตั้ง library แบบ “editable” ด้วย pip install -e
+ cmd ที่ pj => pip install -e E:\devPj\Python\PyN_Library
+ แล้ว imprt ที่ pj
+from my_utils import add, percent
+from my_utils.text_tools import slugify
+from PyN_Library.testFnc import HelloWorld
+debug ได้ปกติ

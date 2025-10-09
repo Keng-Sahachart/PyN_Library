@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PyN_Library"
+version = "0.1.0"
+description = "Personal utility library"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Sahachart Panlawan" }]
+
+[tool.setuptools.packages.find]
+where = ["src"]
