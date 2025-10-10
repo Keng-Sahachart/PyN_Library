@@ -28,6 +28,7 @@ from inw_library import fncDataFrame as fDtf
 
 """ ติดตั้ง library แบบ “editable” ด้วย pip install -e
  cmd ที่ pj => pip install -e E:\devPj\Python\PyN_Library
+  หรือเอาโฟลเดอร์ไว้ข้างๆกัน แล้ว => pip install -e ..\PyN_Library  
  แล้ว imprt ที่ pj
 from my_utils import add, percent
 from my_utils.text_tools import slugify
