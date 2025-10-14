@@ -87,9 +87,14 @@ print(script)
 
 
 
-def import_excel_to_sql_server(file_path, table_name,sqlConnection, start_row=0):
+def import_excel_to_sql_server(file_path, table_name, sqlConnection, start_row=0):
     """
     อ่านไฟล์ Excel และนำข้อมูลไป import ลงใน SQL Server
+
+    # ตัวอย่างการใช้งาน
+    file_path = 'path/to/your/excel_file.xlsx'  # เปลี่ยนเป็น path ที่ต้องการ
+    table_name = 'YourTableName'  # ตั้งชื่อของตาราง
+    import_excel_to_sql_server(file_path, table_name, start_row=1)  # ระบุแถวแรกที่ต้องการ import
 
     :param file_path: ตำแหน่งที่ตั้งของไฟล์ Excel
     :param table_name: ชื่อของตารางใน SQL Server
@@ -129,12 +134,7 @@ def import_excel_to_sql_server(file_path, table_name,sqlConnection, start_row=0)
     finally:
         cursor.close()
         sqlConnection.close()
-""" 
-# ตัวอย่างการใช้งาน
-file_path = 'path/to/your/excel_file.xlsx'  # เปลี่ยนเป็น path ที่ต้องการ
-table_name = 'YourTableName'  # ตั้งชื่อของตาราง
-import_excel_to_sql_server(file_path, table_name, start_row=1)  # ระบุแถวแรกที่ต้องการ import
- """
+
 
 
 

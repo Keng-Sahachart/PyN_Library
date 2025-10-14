@@ -8,7 +8,7 @@ import urllib.parse
 # import fncString as fnStr
 def generate_create_table_script(df, table_name, use_index=False):
     '''
-    เช็กว่าตารางมีอยู่ในฐานข้อมูลหรือไม่
+    สร้าง SQL script สำหรับการสร้างตารางใน PostgreSQL จาก DataFrame
 
     Parameters:
     df (dataframe): dataframe ที่ต้องการ

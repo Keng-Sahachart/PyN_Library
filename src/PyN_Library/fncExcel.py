@@ -4,6 +4,11 @@ import pandas as pd
 def read_excel_to_dataframe(file_path, sheet_name=0):
     """
     อ่านไฟล์ Excel และแปลงเป็น DataFrame
+    ตัวอย่างการใช้งาน
+    file_path = 'path/to/your/excel_file.xlsx'  # เปลี่ยนเป็น path ที่ต้องการ
+    dataframe = read_excel_to_dataframe(file_path)  # อ่านชีตแรก
+    dataframe = read_excel_to_dataframe(file_path, sheet_name='Sheet2')  # อ่านชีตที่ชื่อว่า 'Sheet2'
+    dataframe = read_excel_to_dataframe(file_path, sheet_name=1)  # อ่านชีตที่สอง (ดัชนีเริ่มต้นที่ 0)
 
     :param file_path: ตำแหน่งที่ตั้งของไฟล์ Excel
     :param sheet_name: ชื่อหรือดัชนีของชีตที่ต้องการอ่าน (ค่าเริ่มต้นคือชีตแรก)
@@ -16,7 +21,4 @@ def read_excel_to_dataframe(file_path, sheet_name=0):
     except Exception as e:
         return f"An error occurred: {e}"
 
-# ตัวอย่างการใช้งาน
-file_path = 'path/to/your/excel_file.xlsx'  # เปลี่ยนเป็น path ที่ต้องการ
-dataframe = read_excel_to_dataframe(file_path)
-print(dataframe)
+   

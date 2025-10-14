@@ -7,5 +7,6 @@ from . import fncSqlite
 from . import fncSqlServer
 from . import fncString
 from . import testFnc
+from . import fncDateTime
 
-__all__ = ["fncDataFrame", "fncExcel", "fncFile_folder", "fncGeneral", "fncPostgres", "fncSqlite", "fncSqlServer", "fncString"]
+__all__ = ["fncDataFrame", "fncExcel", "fncFile_folder", "fncGeneral", "fncPostgres", "fncSqlite", "fncSqlServer", "fncString", "fncDateTime"]
