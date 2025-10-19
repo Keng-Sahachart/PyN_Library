@@ -66,3 +66,12 @@ def read_csv_to_dataframe(file_path, delimiter=','):
     except Exception as e:
         print(f"An error occurred: {e}")
         return None 
+    
+def clean_df_column_names(df):
+    """Clean column names of a DataFrame by removing spaces and special characters."""
+    cleaned_names = []
+    for col in df.columns:
+        clean_col = ''.join(e for e in col if e.isalnum() or e == '_')
+        cleaned_names.append(clean_col)
+    df.columns = cleaned_names
+    return df

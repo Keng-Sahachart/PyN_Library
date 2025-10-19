@@ -45,7 +45,7 @@ def generate_create_table_script(df, table_name, use_index=False):
 
     for i, column in enumerate(df.columns):
         if column:  # ถ้ามีชื่อคอลัมน์
-            col_name = column
+            col_name = clean_column_names([column])[0]
         else:  # ถ้าไม่มีชื่อคอลัมน์
             col_name = f'col{i+1:03}'  # col001, col002, ...
         dtype = str(df[column].dtype)
@@ -55,6 +55,13 @@ def generate_create_table_script(df, table_name, use_index=False):
     create_table_query += ", ".join(columns) + " );"
     return  create_table_query #check_exists_query,
 
+def clean_column_names(col_names):
+    """Clean column names by removing spaces and special characters."""
+    cleaned_names = []
+    for col in col_names:
+        clean_col = ''.join(e for e in col if e.isalnum() or e == '_')
+        cleaned_names.append(clean_col)
+    return cleaned_names
 
 def dataframe_to_csv_stringio(df, use_index=False):
     """Convert DataFrame to a CSV format in memory."""
